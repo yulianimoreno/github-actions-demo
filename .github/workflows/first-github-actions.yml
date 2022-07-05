@@ -1,0 +1,9 @@
+name: Shell commands   #Name of the github actions yaml file
+on: [push]             #When do we want to run this workflow file 
+
+jobs:                 #Task/projects ? jos is a action 
+    run-shell-command:   #Action 
+        runs-on: ubuntu-latest  #To run commands in ubuntu (Server or machine provided by GitHUb for running any kind of commands or execute any code)
+        steps:     #Steps 
+            - name: echo a string
+              run: echo "Hello, Security Gurus! This is our First GitHub Action"
