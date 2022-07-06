@@ -9,7 +9,7 @@ jobs:
       - name: Checkout              #Firts step 
         uses: actions/checkout@v2
         with:
-          ref: master
+          ref: main
       - name: ZAP Scan              #Second step
         uses: zaproxy/action-full-scan@v0.4.0
         with:
