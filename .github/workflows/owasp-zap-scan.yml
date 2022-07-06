@@ -1,0 +1,19 @@
+name: OWASP ZAP integration with github actions
+on: [push]
+
+jobs:
+  zap_scan:
+    runs-on: ubuntu-latest
+    name: Scan the webapplication
+    steps:
+      - name: Checkout              #Firts step 
+        uses: actions/checkout@v2
+        with:
+          ref: master
+      - name: ZAP Scan              #Second step
+        uses: zaproxy/action-full-scan@v0.4.0
+        with:
+          docker_name: 'owasp/zap2docker-stable'
+          target: 'http://testphp.vulnweb.com/'
+          rules_file_name: '.zap/rules.tsv'
+          cmd_options: '-a'
