@@ -6,5 +6,4 @@ jobs:                 #Task/projects ? jos is a action
         runs-on: ubuntu-latest  #To run commands in ubuntu (Server or machine provided by GitHUb for running any kind of commands or execute any code)
         steps:     #Steps 
             - name: echo a string
-              run: echo "Hello Koneksys"
               run: ls
